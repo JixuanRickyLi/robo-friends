@@ -18,23 +18,23 @@ class App extends Component {
             robots: [],
             searchField: ''
         }
-        console.log('1');
     }
 
     //called after render
     //fetch the API content
     componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then( users => {this.setState({robots: users})})
-        console.log('2');
         const temp =   {
-            id: 11,
+            id: 113,
             name: 'Steve Rroboto',
             username: 'S_roboto',
             email: 'Steve.Roboto@kssv.biz'
         }
-        this.setState({robots: this.state.robots.concat(temp)})
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then( users => {
+
+                this.setState({robots: users.concat(temp)})
+            })
     }
 
 // binding free function writing
@@ -43,7 +43,6 @@ class App extends Component {
     }
 
     render() {
-        console.log('3');
         const {searchField, robots} = this.state;
         const filteredRobots = robots.filter(robot => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
