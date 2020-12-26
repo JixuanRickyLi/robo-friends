@@ -28,6 +28,13 @@ class App extends Component {
             .then(response => response.json())
             .then( users => {this.setState({robots: users})})
         console.log('2');
+        const temp =   {
+            id: 11,
+            name: 'Steve Rroboto',
+            username: 'S_roboto',
+            email: 'Steve.Roboto@kssv.biz'
+        }
+        this.setState({robots: this.state.robots.concat(temp)})
     }
 
 // binding free function writing
