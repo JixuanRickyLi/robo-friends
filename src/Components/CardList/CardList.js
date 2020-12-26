@@ -8,7 +8,13 @@ import Card from "../Card/Card";
 
 
 const CardList = (props) => {
+
     const robots = props.robots;
+
+    // if(true) {
+    //     throw new Error('Noooo, this is an error')
+    // }
+
     return (
         <div>{
             robots.map((user, i) => {
