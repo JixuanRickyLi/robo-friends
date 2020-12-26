@@ -1,0 +1,16 @@
+/*
+*   created bt Jixuan Li 
+*   2020-12-25-19:04
+*/
+@font-face {
+    font-family: 'SEGA LOGO FONT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SEGA LOGO FONT'), url('../../resources/SEGA.woff') format('woff');
+}
+
+h1 {
+    font-family: 'SEGA LOGO FONT';
+    color: #0ccac4;
+    font-weight: 100;
+}
