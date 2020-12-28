@@ -18,7 +18,7 @@ const CardList = (props) => {
     return (
         <div>{
             robots.map((user, i) => {
-                console.log(user)
+                // console.log(user)
                 // user maps to the robot item, the second, i maps to the index
                     return <Card
                         key={user.id}
